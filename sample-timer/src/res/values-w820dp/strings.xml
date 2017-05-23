@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cancel_alarms_button_text">CANCEL ALARMS</string>
+    <string name="enter_value_text">Enter Value</string>
+    <string name="add_value_button_text">ADD VALUE</string>
+    <string name="export_data_button_text">EXPORT DATA</string>
+    <string name="enter_comment_text">Enter Comment</string>
+</resources>

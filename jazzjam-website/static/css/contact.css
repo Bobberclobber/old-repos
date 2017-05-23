@@ -1,0 +1,29 @@
+section{
+}
+section h1{
+    color:              red;
+    width:              40%;
+    margin:                 0 auto;
+}
+article{
+    display:            block;
+    margin:             15px auto;
+
+    padding:            10px;
+
+    width:              40%;
+}
+.line{
+    display:            block;
+}
+
+.line a{
+    display:            inline;
+}
+.line p{
+    display:            inline;
+}
+.line a, p:nth-of-type(2){
+    float:  right;
+
+}

@@ -1,0 +1,9 @@
+# Directory containing the source for the tutorial
+ann-tut-src/
+
+# Python compiled files
+*.pyc
+__pycache__/
+
+# Virtual environment
+ann-venv/

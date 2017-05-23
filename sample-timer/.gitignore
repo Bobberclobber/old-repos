@@ -1,0 +1,11 @@
+# Android Studio project files
+/local.properties
+/.idea/workspace.xml
+/.idea/libraries
+.DS_Store
+
+# Build directory
+/build
+
+# Windows files
+Thumbs.db

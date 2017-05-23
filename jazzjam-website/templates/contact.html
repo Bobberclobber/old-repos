@@ -1,0 +1,38 @@
+{% extends "masterpage.html" %}
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/contact.css') }}"/>
+{% endblock %}
+{% block body %}
+<section>
+    <h1>
+        Kontakt
+    </h1>
+    <article>
+        <div class="line">
+            <p>Stina Rosenberg</p>
+        </div><!--/line-->
+        <div class="line">
+            <p>Telefon:</p>
+            <p>070-34 24 632</p>
+        </div><!--/line-->
+        <div class="line">
+            <p>E-post:</p>
+            <a href="mailto:stina@jazzjam.nu">stina@jazzjam.nu</a>
+        </div><!--/line-->
+    </article>
+    <article>
+        <div class="line">
+            <p>Jan Fagerström</p>
+            <p>Webbansvarig</p>
+        </div><!--/line-->
+        <div class="line">
+            <p>E-post:</p>
+            <a href="mailto:jan@jazzjam.nu">jan@jazzjam.nu</a>
+        </div><!--/line-->
+    </article>
+
+    <article>
+        Facebookgrupp
+    </article>
+</section>
+{% endblock %}

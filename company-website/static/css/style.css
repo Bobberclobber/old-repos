@@ -1,0 +1,118 @@
+/*
+ Light Green: #00BF1A
+ Medium Green: #009915
+ Dark Green: #004009
+ Light Gray: #E0E0E0
+*/
+
+/* UNIVERSAL STYLES */
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+/* Font: Boris Black Bloxx; */
+@font-face{
+	font-family: 'Boris Black Bloxx';
+	src: url('../font/BorisBlackBloxx.ttf');
+	src: local('Boris Black Bloxx'), url('../font/BorisBlackBloxx.ttf')
+		format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+/* Font: Thurston */
+@font-face{
+	font-family: 'Thurston';
+	src: url('../font/THURSTON_erc_002.ttf');
+	src: local('Thurston'), url('../font/THURSTON_erc_002.ttf')
+		format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+/* BODY STYLES */
+body{
+	background-color: #E0E0E0;
+}
+
+/* WRAPPER STYLES */
+#wrapper{
+	width: 960px;
+	height: 500px;
+	margin: 10px auto;
+	background-color: white;
+}
+
+/* HEADER STYLES */
+header{
+	width: 960px;
+	height: 100px;
+	margin: 10px auto;
+	font-size: 80pt;
+	font-family: Thurston;
+	text-align: center;	
+	position: relative;
+}
+
+header a{
+	height: 100px;
+	color: black;
+	text-decoration: none;
+}
+
+header a:hover{
+	text-shadow: 2px 2px 2px #00BF1A;
+}
+
+header #scramble{
+	position: absolute;
+	left: 32%;
+	top: -25%;	
+}
+
+header #studios{
+	position: absolute;
+	left: 60%;
+	top: 5%;
+}
+
+/* NAV STYLES */
+nav{
+	width: 600px;
+	height: 60px;
+	margin: 10px auto;
+}
+
+nav ul{
+	list-style: none;
+}
+
+nav li{
+	float: left;
+}
+
+nav a{
+	width: 80px;
+	height: 30px;
+	margin-left: 48px;
+	margin-top: 10px;
+	color: black;
+	display: block;
+	font-family: Arial;
+	line-height: 30px;
+	text-align: center;
+	text-decoration: none;
+}
+
+nav a:hover{
+	border-bottom: 3px solid #00BF1A;
+}
+
+nav a:active{
+	border-bottom: 3px solid #009915;
+}
+
+.active{
+	border-bottom: 3px solid #00BF1A;
+}

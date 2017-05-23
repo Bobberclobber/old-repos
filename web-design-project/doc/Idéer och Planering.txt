@@ -1,0 +1,10 @@
+DELMOMMENT:
+
+-Brainstorming
+-Sätta upp grundskelett i html och css
+-Utvärdera kunskaper
+-Söka design-idéer
+-Skaffa/Redigera bilder
+-Söka tekniker
+
+Inlämning 26/5 v.21

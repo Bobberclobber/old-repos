@@ -1,0 +1,135 @@
+/* UNIVERSAL STYLES */
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+@font-face {
+	font-family: 'AnimaliaScissored';
+	src: url('../font/AnimaliaScissored.ttf');
+	src: local('AnimaliaScissored'), url('../font/AnimaliaScissored.ttf')
+		format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+/* UNIVERSAL STYLES ENDS */
+
+/* BODY STYLE */
+body{
+	background-color: #262626;
+	-webkit-user-select: none;
+	-moz-user-select: -moz-none;
+	-ms-user-select: none;
+	user-select: none;
+}
+/* BODY STYLE ENDS */
+
+/* WRAPPER STYLE */
+#wrapper{
+	width: 960px;
+	margin: 30px auto;
+	background-color: #1A1A1A;
+	border: 1px solid black;
+	box-shadow: 0px 2px 5px black;
+}
+/* WRAPPER STYLE */
+
+/* MAIN STYLE */
+#main{
+	width: 940px;
+	padding: 10px;
+}
+/* MAIN STYLE ENDS */
+
+/* HEADER STYLE */
+header{
+	margin-right: 10px;
+	float: left;
+}
+/* HEADER STYLE ENDS */
+
+/* LOGO STYLE */
+#logo a{
+	text-decoration: none;
+	color: white;
+	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
+	font-size: 40px;
+	margin-bottom: 20px;
+	display: block;
+}
+
+#logo a:hover{
+	color: #808080;
+	cursor: pointer;
+}
+
+#logo a:active{
+	color: #404040;
+}
+/* LOGO STYLE ENDS */
+
+/* NAV STYLE */
+nav ul{
+	list-style-type: none;
+	border-top: 1px solid #404040;
+}
+
+nav a{
+	color: #808080;
+	text-decoration: none;
+	font-family: 'Roboto', sans-serif;
+	font-size: 20px;
+}
+
+nav a:hover{
+	color: #404040;
+}
+
+nav a:active{
+	color: #BFBFBF;
+}
+/* NAV STYLE ENDS */
+
+/* SECTION STYLE */
+section{
+	overflow: auto;
+}
+
+h1{
+	color: white;
+	font-family: 'Roboto', sans-serif;
+	font-size: 70px;
+}
+
+#h11{
+	position: relative;
+	top: 55px;
+}
+
+#h11:after{
+	color: #808080;
+	font-family: 'AnimaliaScissored';
+	font-size: 350px;
+	content: 'p';
+	text-shadow: 2px 2px 5px black;
+}
+
+p{
+	color: #808080;
+	margin-top: 20px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 40px;
+}
+/* SECTION STYLE ENDS */
+
+/* FOOTER STYLE */
+footer{
+	width: 960px;
+	height: 100px;
+	margin: 0px auto;
+}
+/* FOOTER STYLE ENDS */
+
+/* colors: #000000, #404040, #808080, #BFBFBF svart+tre nyanser av gr� */
+/* -webkit-animation-fill-mode: forwards; g�r s� att animationer pausas n�r de tar slut */

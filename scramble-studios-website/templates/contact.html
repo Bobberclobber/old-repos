@@ -1,0 +1,24 @@
+{% extends "template.html" %}
+
+{% block nav_script %}
+<script>
+		$(document).ready(function() {
+			$("#contact_nav").addClass("nav_active");
+		});
+
+</script>
+{% endblock %}
+
+{% block wrapper %}
+    <ul id="contact_list">
+        {% for item in contact_info %}
+        <li>
+            <div class="contact_info_item">
+                <h4>{{ item[0] }}</h4>
+                <p>E-mail: <a href="mailto:{{ item[1] }}?subject=Scramble Studios">{{ item[1] }}</a></p>
+                <p>Phone: {{ item[2] }}</p>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

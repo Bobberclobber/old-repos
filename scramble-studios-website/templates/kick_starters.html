@@ -1,0 +1,25 @@
+{% extends "template.html" %}
+
+{% block nav_script %}
+<script>
+		$(document).ready(function() {
+			$("#kick_starters_nav").addClass("nav_active");
+		});
+
+</script>
+{% endblock %}
+
+{% block wrapper %}
+    <p id="kick_starter_text">
+        Want us to notify you of our new kick-starters? <br>
+        Enter your e-mail and click the subscribe button and we'll message you!
+    </p>
+
+    <p>
+        {{ subscribed }}
+    </p>
+    <form action="{{ url_for('subscribe') }}" method=POST>
+        E-mail: <input name="email" type="email">
+        <input type="submit">
+    </form>
+{% endblock %}

@@ -1,0 +1,139 @@
+/* Animations and classes for logo part 0 transitions */
+@keyframes logo-p0-to-portrait {
+    from    { color: black; }
+    to      { color: green; }
+}
+
+@keyframes logo-p0-to-landscape {
+    from    { color: green; }
+    to      { color: black; }
+}
+
+.logo-p0-to-portrait {
+    animation-duration: 1.0s;
+    animation-fill-mode: forwards;
+    animation-name: logo-p0-to-portrait;
+}
+
+.logo-p0-to-landscape {
+    animation-duration: 1.0s;
+    animation-fill-mode: forwards;
+    animation-name: logo-p0-to-landscape;
+}
+
+/* Animations and classes for logo part 1 transitions */
+@keyframes logo-p1-to-portrait {
+    0% {
+        font-size: 50px;
+        left: 0px;
+    }
+    50% {
+        font-size: 30px;
+        left: -290px;
+        top: 0px;
+    }
+    100% {
+        font-size: 30px;
+        left: -290px;
+        top: -40px;    
+    }
+}
+
+@keyframes logo-p1-to-landscape {
+    0% {
+        font-size: 30px;
+        left: -290px;
+        top: -40px;
+    }
+    50% {
+        font-size: 30px;
+        left: -290px;
+        top: 0px;
+    }
+    100% {
+        font-size: 50px;
+        left: 0px;
+    }
+}
+
+.logo-p1-to-portrait {
+    animation-duration: 1.0s;
+    animation-fill-mode: forwards;
+    animation-name: logo-p1-to-portrait;
+}
+
+.logo-p1-to-landscape {
+    animation-duration: 1.0s;
+    animation-fill-mode: forwards;
+    animation-name: logo-p1-to-landscape;
+}
+
+/* Animations and classes for logo part 2 transitions */
+@keyframes logo-p2-to-portrait {
+    0% {
+        font-size: 50px;
+        left: 0px; 
+    }
+    50% {
+        font-size: 30px;
+        left: -295px;
+        top: 0px;
+    }
+    100% {
+        font-size: 30px;
+        left: -295px;
+        top: -40px;
+    }
+}
+
+@keyframes logo-p2-to-landscape {
+    0% {
+        font-size: 30px;
+        left: -295px;
+        top: -40px;
+    }
+    50% {
+        font-size: 30px;
+        left: -295px;
+        top: 0px;
+    }
+    100% {
+        font-size: 50px;
+        left: 0px;
+    }
+}
+
+.logo-p2-to-portrait {
+    animation-duration: 1.0s;
+    animation-fill-mode: forwards;
+    animation-name: logo-p2-to-portrait;
+}
+
+.logo-p2-to-landscape {
+    animation-duration: 1.0s;
+    animation-fill-mode: forwards;
+    animation-name: logo-p2-to-landscape;
+}
+
+/* Animations and classes for logo part 3 transitions */
+@keyframes logo-p3-hide {
+    from    { opacity: 1.0; }
+    to      { opacity: 0.0; }
+}
+
+@keyframes logo-p3-show {
+    from    { opacity: 0.0; }
+    to      { opacity: 1.0; }
+}
+
+.logo-p3-to-portrait {
+    animation-duration: 1.0s;
+    animation-fill-mode: forwards;
+    animation-name: logo-p3-hide;
+}
+
+.logo-p3-to-landscape {
+    animation-duration: 1.0s;
+    animation-fill-mode: forwards;
+    animation-name: logo-p3-show;
+}

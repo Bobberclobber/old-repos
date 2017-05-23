@@ -1,0 +1,60 @@
+<!doctype HTML>
+
+<html>
+
+<!-- HEAD -->
+<head>
+	<title>
+        {% block title %}
+        {% endblock %}
+    </title>
+	<meta charset=UTF-8>
+	<link rel="stylesheet" type="text/css" href="{{ url_for("static", filename="css/style.css") }}">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    {% block nav_script %}
+    {% endblock %}
+    {% block script %}
+    {% endblock %}
+</head>
+<!-- HEAD CLOSES -->
+
+<!-- BODY -->
+<body>
+	
+	<!-- HEADER -->
+	<header>
+		<a href="/">
+			<p id="scramble">SCRAMBLE</p>
+			<p id="studios">studios</p>
+		</a>
+	</header>
+	<!-- HEADER CLOSES -->
+
+	<!-- NAV -->
+	<nav>
+		<!-- NAV ITEMS -->
+		<ul>
+			<li><a id="home_nav" href="/">Home</a></li>
+			<li><a id="temp2" href="#">Temp2</a></li>
+			<li><a id="gallery_nav" href="/gallery">Gallery</a></li>
+			<li><a id="temp4" href="#">Temp4</a></li>
+		</ul>
+	</nav>
+	<!-- NAV CLOSES -->
+
+	<!-- WRAPPER -->
+	<div id="wrapper">
+        {% block wrapper %}
+        {% endblock %}
+	</div>
+	<!-- WRAPPER CLOSES -->
+
+	<!-- FOOTER -->
+	<footer>
+	</footer>
+	<!-- FOOTER CLOSES -->
+
+</body>
+<!-- BODY CLOSES -->
+
+</html>

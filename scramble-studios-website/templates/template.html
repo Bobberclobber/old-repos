@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<!-- HEAD -->
+<head lang="en">
+	<title>
+        {% block title %}
+        {% endblock %}
+    </title>
+	<meta charset=UTF-8>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <!-- This block is used for the jquery script handling the nav bar animations -->
+    {% block nav_script %}
+    {% endblock %}
+    <!-- This block is used for other scripts -->
+    {% block script %}
+    {% endblock %}
+</head>
+<!-- HEAD CLOSES -->
+<body>
+    <!-- HEADER -->
+    <header>
+        <a id="logo" href="/">Scramble Studios</a>
+    </header>
+    <!-- HEADER CLOSES -->
+    <!-- NAV -->
+    <nav>
+        <ul>
+            <li><a id="home_nav" href="/">Home</a></li>
+            <li><a id="products_nav" href="/products">Products</a></li>
+            <li><a id="kick_starters_nav" href="/kick_starters">Kick-Starters</a></li>
+            <li><a id="contact_nav" href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+    <!-- NAV CLOSES -->
+    <div id="wrapper">
+        {% block wrapper %}
+        {% endblock %}
+    </div>
+    {% block body %}
+    {% endblock %}
+</body>
+</html>

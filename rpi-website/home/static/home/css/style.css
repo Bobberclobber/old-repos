@@ -1,0 +1,43 @@
+* {
+    margin:     0px;
+    padding:    0px;
+}
+
+/* Header and logo */
+header {
+    font-family: 'Fira Sans', sans-serif;
+    height: 150px;
+    margin: auto;
+    padding: 10px;
+    position: relative;
+    width: 1280px;
+    
+    border: 1px solid black;
+}
+
+header h1 {
+    font-size: 80px;
+}
+
+header h2 {
+    font-size: 50px;
+}
+
+#hw-name {
+    left: 350px;
+    position: absolute;
+    top: 90px;
+}
+
+#logo *, #hw-name * {
+    display: inline;
+    position: relative;
+}
+
+nav {
+    border: 1px solid red;
+    float: right;
+    left: 99%;
+    position: absolute;
+    top: 0px;
+}

@@ -1,0 +1,27 @@
+{% extends "standard_template.html" %}
+{% block title %}
+    Gallery
+{% endblock %}
+
+{% block nav_script %}
+    <script>
+		$(document).ready(function() {
+			$("#gallery_nav").addClass("active");
+		});
+	</script>
+{% endblock %}
+
+{% block script %}
+    <script>
+		// Check for the various File API support
+		if *(window.File && window.FileReader && window.FileList && window.Blob) {
+
+		} else {
+			alert('The File APIs are notfully supported in this browser.');
+		}
+	</script>
+{% endblock %}
+
+{% block wrapper %}
+    <p>This is gallery</p>
+{% endblock %}

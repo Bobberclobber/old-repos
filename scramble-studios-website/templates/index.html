@@ -1,0 +1,114 @@
+{% extends "template.html" %}
+
+{% block nav_script %}
+<script type="text/javascript">
+		$(document).ready(function() {
+			$("#home_nav").addClass("nav_active");
+			$(".arrow").addClass("down_arrow");
+		});
+
+</script>
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript">
+$(document).ready(function(){
+    // Check if the page is all scrolled down
+    $(window).scroll(function() {
+        if($(window).scrollTop() + $(window).height() >= $(document).height() - 50) {
+            $(".arrow").removeClass("down_arrow");
+            $(".arrow").addClass("up_arrow");
+        } else {
+            $(".arrow").addClass("down_arrow");
+            $(".arrow").removeClass("up_arrow");
+        }
+    });
+
+    // When clicking on the nav arrow
+    $(function() {
+        $('a[href*=#]:not([href=#])').click(function() {
+            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+
+                    // Changes the href of the arrow depending on what it was before
+                    var h_ref = $('.arrow_link').attr('href');
+                    switch (h_ref) {
+                        case '#logo':
+                            $('.arrow_link').attr('href', '#s1');
+                            break;
+                        case '#s1':
+                            $('.arrow_link').attr('href', '#s2');
+                            break;
+                        case '#s2':
+                            $('.arrow_link').attr('href', '#s3');
+                            break;
+                        case '#s3':
+                            $('.arrow_link').attr('href', '#logo');
+                            break;
+                    }
+                    return false;
+                }      
+            }
+        });
+    });
+});
+</script>
+{% endblock %}
+
+{% block wrapper %}
+<div id="initial_view"></div>
+
+<div id="s1" class="showcase">
+    <img src="{{ url_for('static', filename='img/100 - ruudmCU.jpg') }}"/>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Nulla varius odio nulla, vitae efficitur sem aliquam vel.
+        Ut accumsan dolor at quam gravida auctor. Donec dignissim
+        ex sollicitudin est aliquet, a sodales magna blandit.
+        Proin elementum nisl augue, ut sollicitudin massa dapibus
+        ut. Etiam facilisis velit lectus, in posuere nunc pellentesque
+        eu. Nulla maximus sodales scelerisque. Duis gravida aliquet
+        tempus. In lobortis mauris ut lacinia scelerisque. Nam sit
+        amet placerat nibh. Vestibulum eget mauris tincidunt lorem
+        ornare tincidunt ac sed elit</p>
+</div>
+
+<div id="s2" class="showcase">
+    <img src="{{ url_for('static', filename='img/103 - LoLJv3e.jpg') }}"/>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Nulla varius odio nulla, vitae efficitur sem aliquam vel.
+        Ut accumsan dolor at quam gravida auctor. Donec dignissim
+        ex sollicitudin est aliquet, a sodales magna blandit.
+        Proin elementum nisl augue, ut sollicitudin massa dapibus
+        ut. Etiam facilisis velit lectus, in posuere nunc pellentesque
+        eu. Nulla maximus sodales scelerisque. Duis gravida aliquet
+        tempus. In lobortis mauris ut lacinia scelerisque. Nam sit
+        amet placerat nibh. Vestibulum eget mauris tincidunt lorem
+        ornare tincidunt ac sed elit</p>
+</div>
+
+<div id="s3" class="showcase">
+    <img src="{{ url_for('static', filename='img/208 - FPM67pK.jpg') }}"/>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Nulla varius odio nulla, vitae efficitur sem aliquam vel.
+        Ut accumsan dolor at quam gravida auctor. Donec dignissim
+        ex sollicitudin est aliquet, a sodales magna blandit.
+        Proin elementum nisl augue, ut sollicitudin massa dapibus
+        ut. Etiam facilisis velit lectus, in posuere nunc pellentesque
+        eu. Nulla maximus sodales scelerisque. Duis gravida aliquet
+        tempus. In lobortis mauris ut lacinia scelerisque. Nam sit
+        amet placerat nibh. Vestibulum eget mauris tincidunt lorem
+        ornare tincidunt ac sed elit</p>
+</div>
+
+<div id="bottom_anchor">
+    <a class="arrow_link" href="#s1">
+        <div class="arrow"></div>
+        <div class="half_circle"></div>
+    </a>
+</div>
+{% endblock %}

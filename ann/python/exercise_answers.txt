@@ -1,0 +1,35 @@
+Sigmoid neurons simulating perceptrons, part I:
+    > Output for all perceptrons is calulated through: 
+        - w*x + b <= 0 -> 0
+        - w*x + b  > 0 -> 1
+    > Multiplication with constans c > 0:
+        - c*(w*x + b) <= 0 <-> w*x + b <= 0/c = 0
+        - c*(w*x + b=  > 0 <-> w*x + b  > 0/c = 0
+Sigmoid neurons simulating perceptrons, part II:
+    > If w*x + b > 0
+        - Perceptron output = 1
+        - Sigmoid output as c -> Inf.: lim[z->Inf.] 1 / (1 + exp(-z)) = 1
+    > If w*x + b < 0
+        - Perceptron output = 0
+        - Sigmoid output as c -> Inf.: lim[z->(-Inf.)] 1 / (1 + exp(-z)) = 0
+    > If w*x + b = 0
+        - Perceptron output = 0
+        - Sigmoid output as c -> Inf.: z = 0 -> 1 / (1 + exp(0)) = 0.5
+
+10-neuron output to 4-neuron output:
+    > The 10 neurons, numbered 0-9, fire if the corresponding digit is detected
+    > Each of the 4 neurons take data from all the others as input
+    > The neuron representing 1 must fire (sigma(z) >= 0.5) only for all odd numbers:
+        - z = w * x + b >= 0 for x = (0 1 0 0 0 0 0 0 0 ), (0 0 0 1 0 0 0 0 0 0), ..., (0 0 0 0 0 0 0 0 1)
+        - z = w * x + b  < 0 for x = (1 0 0 0 0 0 0 0 0 ), (0 0 1 0 0 0 0 0 0 0), ..., (0 0 0 0 0 0 0 1 0)
+            -> b = 0, w = (-1 0 -1 0 -1 0 -1 0 -1 0) (for example)
+    > The neuron representing 2 must fire only for the numbers 2, 3, 6 and 7:
+        - z = w * x + b >= 0 for x = (0 0 1 0 0 0 0 0 0 ), (0 0 0 1 0 0 0 0 0 0), (0 0 0 0 0 1 0 0 0), (0 0 0 0 0 0 1 0 0)
+        - z = w * x + b  < 0 for the rest
+            -> b = 0, w = (-1 -1 0 0 -1 -1 0 0 -1 -1) (for example)
+    > And so on, by putting the bias to 0, (or -1 depending on if we want negative weights) we can 
+      choose weights so that all digits which a certain bit is not part of get z < 0 when the input is received.
+      If, as stated, positive results are 0.99< and negative are <0.01, we can choose e.g. 1 for all digits
+      which the bit is a part of, and -1 for all other, which will at worst give z = 0.99 - 0.09 = 0.9
+      for digits the bit are supposed to be a part of, and z = -0.9 for the other, which is more than enough to
+      bring the sigma function to the correct side of 0.5.

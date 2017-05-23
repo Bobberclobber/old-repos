@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Jazzjam</title>
+    <meta charset=UTF-8/>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}"/>
+    {% block head %}
+    {% endblock %}
+  </head>
+  <body>
+    <header>
+      <a href="home">Jazzjam</a>
+      <p>Öppen scen i Linköping!</p>
+      <nav>
+        <ul>
+          <li><a href="home" {% if request.path == "/" or request.path == "/home" or request.path == "/index" %} class="current" {% endif %}>Hem</a></li>
+          <li><a href="program" {% if request.path == "/program" %} class="current" {% endif %}>Program</a></li>
+          <li><a href="gallery" {% if request.path == "/gallery" %} class="current" {% endif %}>Galleri</a></li>
+          <li><a href="about" {% if request.path == "/about" %} class="current" {% endif %}>Om oss</a></li>
+          <li><a href="contact" {% if request.path == "/contact" %} class="current" {% endif %}>Kontakt</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    {% block body %}
+    {% endblock %}
+
+    <footer>
+        <p>Denna hemsida har designats av <a href="">Scramble Studios</a>.</p>
+    </footer>
+  </body>
+</html>

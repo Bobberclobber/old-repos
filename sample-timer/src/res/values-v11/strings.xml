@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="start_time_text">START TIME</string>
+    <string name="end_time_text">END TIME</string>
+    <string name="alarm_number_text">ALARM NUMBER</string>
+    <string name="start_button_text">START</string>
+    <string name="cancel_alarms_button_text">CANCEL ALARMS</string>
+    <string name="enter_value_text">Enter Value</string>
+    <string name="add_value_button_text">ADD VALUE</string>
+    <string name="export_data_button_text">EXPORT DATA</string>
+    <string name="enter_comment_text">Enter Comment</string>
+</resources>

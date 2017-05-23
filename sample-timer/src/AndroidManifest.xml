@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="bobberclobber.scramble_studios.se.samplingtimer" >
+
+    <!-- PERMISSIONS -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/st_ico"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+
+        <!-- ACTIVITIES -->
+        <activity
+            android:name=".activity.MainActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:theme="@style/FullscreenTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activity.GraphActivity"
+            android:label="@string/title_activity_graph"
+            android:launchMode="singleTask"/>
+
+        <!-- RECEIVERS -->
+        <receiver
+            android:name=".receiver.AlarmReceiver"
+            android:exported="false" />
+        <receiver
+            android:name=".receiver.ReSchedulerReceiver"
+            android:exported="false" />
+
+    </application>
+
+</manifest>

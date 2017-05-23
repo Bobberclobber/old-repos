@@ -1,0 +1,82 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0099cc"
+    android:orientation="vertical"
+    tools:context=".GraphActivity.GraphFragment">
+
+    <com.flotandroidchart.flot.FlotChartContainer
+        android:id="@+id/chart_container"
+        android:layout_width="fill_parent"
+        android:layout_height="250dp"/>
+
+    <!-- ADD VALUE FIELD -->
+    <TextView
+        android:id="@+id/enter_value_label"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/enter_value_text"
+        android:gravity="center"
+        android:textColor="#33b5e5"
+        android:textSize="40sp"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/enter_value_field"
+        android:labelFor="@id/enter_value_field"
+        android:gravity="center"
+        android:inputType="number"
+        android:layout_width="fill_parent"
+        android:layout_height="40sp"
+        android:layout_margin="5dp"
+        android:background="#2483a6"/>
+
+    <!-- ADD COMMENT FIELD -->
+    <TextView
+        android:id="@+id/enter_comment_label"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/enter_comment_text"
+        android:gravity="center"
+        android:textColor="#33b5e5"
+        android:textSize="40sp"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/enter_comment_field"
+        android:labelFor="@id/enter_comment_field"
+        android:gravity="center"
+        android:inputType="number"
+        android:layout_width="fill_parent"
+        android:layout_height="40sp"
+        android:layout_margin="5dp"
+        android:background="#2483a6"/>
+
+    <!-- ADD VALUE BUTTON -->
+    <Button
+        android:id="@+id/cancel_alarms_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_animation"
+        android:gravity="bottom|center"
+        android:onClick="onAddValueButtonClick"
+        android:text="@string/add_value_button_text"
+        android:textColor="#ffb0f8ff"
+        android:textSize="40sp"
+        android:textStyle="bold"/>
+
+    <!-- EXPORT DATA BUTTON -->
+    <Button
+        android:id="@+id/export_data_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_animation"
+        android:gravity="bottom|center"
+        android:onClick="onExportDataButtonClick"
+        android:text="@string/export_data_button_text"
+        android:textColor="#ffb0f8ff"
+        android:textSize="40sp"
+        android:textStyle="bold"/>
+
+</LinearLayout>

@@ -1,0 +1,93 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0099cc"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#0099cc"
+        android:orientation="vertical">
+
+        <!-- START TIME -->
+        <TextView
+            android:id="@+id/start_time_label"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:text="@string/start_time_text"
+            android:textColor="#33b5e5"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+        <TimePicker
+            android:id="@+id/start_time_picker"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- END TIME -->
+        <TextView
+            android:id="@+id/end_time_label"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/end_time_text"
+            android:textColor="#33b5e5"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+        <TimePicker
+            android:id="@+id/end_time_picker"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- ALARM AMOUNT -->
+        <TextView
+            android:id="@+id/alarm_number_label"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/alarm_number_text"
+            android:textColor="#33b5e5"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+        <NumberPicker
+            android:id="@+id/alarm_number_picker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+
+        <!-- START BUTTON -->
+        <Button
+            android:id="@+id/start_button"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/button_animation"
+            android:gravity="center"
+            android:onClick="onStartButtonClick"
+            android:text="@string/start_button_text"
+            android:textColor="#ffb0f8ff"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+        <!-- CANCEL ALARMS BUTTON -->
+        <Button
+            android:id="@+id/cancel_alarms_button"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_animation"
+            android:gravity="bottom|center"
+            android:onClick="onCancelAlarmsButtonClick"
+            android:text="@string/cancel_alarms_button_text"
+            android:textColor="#ffb0f8ff"
+            android:textSize="40sp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+</ScrollView>
